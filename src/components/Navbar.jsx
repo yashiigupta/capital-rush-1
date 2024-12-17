@@ -1,13 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Info, Phone, Briefcase } from 'lucide-react';
+import { FiHome } from "react-icons/fi";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { LuBriefcase } from "react-icons/lu";
+import { FiPhone } from "react-icons/fi";
 
 const Navbar = () => {
   const navItems = [
-    { to: '/', text: 'Home', Icon: Home },
-    { to: '/about', text: 'About', Icon: Info },
-    { to: '/portfolio', text: 'Portfolio', Icon: Briefcase },
-    { to: '/contact', text: 'Contact', Icon: Phone },
+    { to: '/', text: 'Home', Icon: FiHome },
+    { to: '/about', text: 'About', Icon: IoIosInformationCircleOutline },
+    { to: '/portfolio', text: 'Portfolio', Icon: LuBriefcase },
+    { to: '/contact', text: 'Contact', Icon: FiPhone },
   ];
 
   return (

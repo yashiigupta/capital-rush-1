@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             View My Work
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <FaArrowUpRightFromSquare className="ml-2 w-4 h-4" />
           </Link>
         </div>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -40,7 +40,7 @@ const Home = () => {
               image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
             }
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <Link key={index} to = "/about" className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
@@ -52,7 +52,7 @@ const Home = () => {
                 </h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

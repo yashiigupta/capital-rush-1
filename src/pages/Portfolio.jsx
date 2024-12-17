@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import iPhoneImg from '../assets/iPhone-Ss.png';
 import fashmoreImg from '../assets/fashmore-ss.png';
 import quitImg from '../assets/quit.png';
@@ -67,7 +67,7 @@ const Portfolio = () => {
                     <p className="text-sm text-blue-600">{project.category}</p>
                   </div>
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer" />
+                    <FaArrowUpRightFromSquare className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer" />
                   </a>
                 </div>
                 <p className="text-gray-600">{project.description}</p>
