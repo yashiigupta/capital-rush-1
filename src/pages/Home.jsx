@@ -11,8 +11,8 @@ const Home = () => {
             Welcome to My Creative Studio
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            We craft digital experiences that inspire and innovate. Our passion lies in
-            creating beautiful, functional solutions for our clients.
+            I craft digital experiences that inspire and innovate. My passion lies in
+            crafting efficient solutions through my work which can help people.
           </p>
           <Link
             to="/portfolio"
@@ -36,7 +36,7 @@ const Home = () => {
             },
             {
               title: 'Excellence',
-              description: 'Delivering quality in every project we undertake',
+              description: 'Delivering quality in every project I undertake',
               image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
             }
           ].map((item, index) => (

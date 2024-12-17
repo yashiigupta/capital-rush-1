@@ -1,35 +1,50 @@
 import React from 'react';
-import { LuUsers } from "react-icons/lu";
-import { TbTargetArrow } from "react-icons/tb";
-import { SlTrophy } from "react-icons/sl";
+import { GrPersonalComputer } from "react-icons/gr";
+import { IoPersonCircle } from "react-icons/io5";
+import { MdMusicNote } from "react-icons/md";
+
+const achievements = [
+  {
+    "year": 2024,
+    "milestone":  "Achieved a CGPA of 8.57 in the first year of my college" 
+  }, 
+  {
+    "year": 2022,
+    "milestone":  "Achieved a percentage of 94.26% in the 12th standard of my school"
+  }, 
+  {
+    "year": 2020,
+    "milestone":  "Achieved a percentage of 93.4% in the 10th standard of my school"
+  }
+]
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Me</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're a team of passionate creators dedicated to building amazing digital experiences.
+            My name is Yashi Gupta, sophomore at Newton School of Technology.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           {[
             {
-              Icon: <LuUsers  className="w-12 h-12 text-blue-600"/>,
-              title: 'Our Team',
-              description: 'Expert professionals with diverse skills and experience'
+              Icon: <GrPersonalComputer  className="w-12 h-12 text-blue-600"/>,
+              title: 'Skills',
+              description: 'Include Javascript, React JS, Tailwind CSS, Node JS, Python, MySql, etc'
             },
             {
-              Icon: <TbTargetArrow  className="w-12 h-12 text-blue-600"/>,
-              title: 'Our Mission',
-              description: 'Creating innovative solutions that drive business growth'
+              Icon: <IoPersonCircle  className="w-12 h-12 text-blue-600"/>,
+              title: 'Summer Internship',
+              description: 'Interned at IIT Roorkee and Social Studies Foundation'
             },
             {
-              Icon: <SlTrophy className="w-12 h-12 text-blue-600"/>,
-              title: 'Our Values',
-              description: 'Excellence, integrity, and customer satisfaction'
+              Icon: <MdMusicNote className="w-12 h-12 text-blue-600"/>,
+              title: 'Hobbies',
+              description: 'Include coding, listening to music.'
             }
           ].map((item, index) => (
             <div key={index} className="text-center">
@@ -46,24 +61,21 @@ const About = () => {
 
         <div className="bg-gray-50 rounded-xl p-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Our Journey
+            My Academic Journey
           </h2>
           <div className="space-y-8">
-            {[2020, 2021, 2022].map((year) => (
-              <div key={year} className="flex items-start">
+            {achievements.map((item) => (
+              <div key={item.year} className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white font-bold">
-                    {year}
+                    {item.year}
                   </div>
                 </div>
                 <div className="ml-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Milestone {year}
+                    Milestone {item.year}
                   </h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <p className="text-gray-600">{item.milestone}</p>
                 </div>
               </div>
             ))}
