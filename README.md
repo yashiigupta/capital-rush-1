@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### Deployment
 
-
+Open [https://capital-rush-1.vercel.app/](https://capital-rush-1.vercel.app/) to view it in your browser.
 
 ### `npm test`
 
