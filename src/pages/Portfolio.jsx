@@ -1,31 +1,39 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import iPhoneImg from '../assets/iPhone-Ss.png';
+import fashmoreImg from '../assets/fashmore-ss.png';
+import quitImg from '../assets/quit.png';
+import soundcloudImg from '../assets/soundcloud.png';
 
 const Portfolio = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'iPhone 15 Pro',
       category: 'Web Development',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      description: 'Modern e-commerce solution with advanced features'
+      image: iPhoneImg,
+      description: ' iPhone 15 Pro website replica with an advanced video carousel and enhanced user experience.',
+      link: 'https://iphone-15pro-seven.vercel.app/'
     },
     {
-      title: 'Mobile Banking App',
-      category: 'Mobile Development',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
-      description: 'Secure and user-friendly banking application'
+      title: 'Fashmore Shopping Website',
+      category: 'Web Development',
+      image: fashmoreImg,
+      description: 'A modern e-commerce platform delivering the latest in fashion trends',
+      link: 'https://fashmore-emcommerce.vercel.app/'
     },
     {
-      title: 'Corporate Website',
-      category: 'Web Design',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80',
-      description: 'Professional website for enterprise clients'
+      title: 'SoundCloud Music',
+      category: 'Web Development',
+      image: soundcloudImg,
+      description: 'Professional SoundCloud Music Website replica',
+      link: 'https://yashiigupta.github.io/'
     },
     {
-      title: 'Social Media Dashboard',
-      category: 'UI/UX Design',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      description: 'Analytics and management platform'
+      title: 'Catchy Quitting Website',
+      category: 'UI/UX Web Design',
+      image: quitImg,
+      description: 'site for showcasing functionalities knowledge of html css',
+      link: 'https://doyouquit.vercel.app/'
     }
   ];
 
@@ -33,9 +41,9 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">My Portfolio</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore our latest projects and see how we've helped our clients achieve their goals.
+            Explore my projects which showcase my skills in web developement.
           </p>
         </div>
 
@@ -58,7 +66,9 @@ const Portfolio = () => {
                     </h3>
                     <p className="text-sm text-blue-600">{project.category}</p>
                   </div>
-                  <ExternalLink className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer" />
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer" />
+                  </a>
                 </div>
                 <p className="text-gray-600">{project.description}</p>
               </div>
